@@ -681,6 +681,8 @@ Constants
 
    .. deprecated:: 3.10
 
+      Use :data:`PROTOCOL_TLS_CLIENT` or :data:`PROTOCOL_TLS_SERVER` instead.
+
 .. data:: PROTOCOL_TLS_CLIENT
 
    Auto-negotiate the highest protocol version like :data:`PROTOCOL_TLS`,
