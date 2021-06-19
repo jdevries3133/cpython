@@ -1,0 +1,38 @@
+* thread #1, queue = 'com.apple.main-thread', stop reason = hit program assert
+    frame #0: 0x00007fff2047492e libsystem_kernel.dylib`__pthread_kill + 10
+    frame #1: 0x00007fff204a35bd libsystem_pthread.dylib`pthread_kill + 263
+    frame #2: 0x00007fff203f8411 libsystem_c.dylib`abort + 120
+    frame #3: 0x00007fff203f77e8 libsystem_c.dylib`__assert_rtn + 314
+  * frame #4: 0x00000001000050ff python.exe`_PyPegen_raise_error_known_location(p=0x0000000100cca440, errtype=0x00000001004bd0f0, lineno=0, col_offset=0, end_lineno=0, end_col_offset=0, errmsg="unkn
+own parsing error", va=0x00007ffeefbfe5e0) at pegen.c:478:9
+    frame #5: 0x000000010000679a python.exe`RAISE_ERROR_KNOWN_LOCATION(p=0x0000000100cca440, errtype=0x00000001004bd0f0, lineno=0, col_offset=-1, end_lineno=0, end_col_offset=-1, errmsg="unknown par
+sing error") at pegen.h:164:5
+    frame #6: 0x000000010000cc5f python.exe`tokenizer_error(p=0x0000000100cca440) at pegen.c:370:5
+    frame #7: 0x0000000100005fe1 python.exe`initialize_token(p=0x0000000100cca440, token=0x0000000100c7f840, start=0x0000000000000000, end=0x0000000000000000, token_type=60) at pegen.c:682:40
+    frame #8: 0x0000000100005ad9 python.exe`_PyPegen_fill_token(p=0x0000000100cca440) at pegen.c:752:12
+    frame #9: 0x00000001000063fc python.exe`_PyPegen_expect_token(p=0x0000000100cca440, type=526) at pegen.c:867:13
+    frame #10: 0x00000001000103fc python.exe`_tmp_15_rule(p=0x0000000100cca440) at parser.c:21860:25
+    frame #11: 0x0000000100006397 python.exe`_PyPegen_lookahead(positive=1, func=(python.exe`_tmp_15_rule at parser.c:21844), p=0x0000000100cca440) at pegen.c:858:24
+    frame #12: 0x000000010000f0a3 python.exe`compound_stmt_rule(p=0x0000000100cca440) at parser.c:2096:13
+    frame #13: 0x000000010000ec04 python.exe`statement_rule(p=0x0000000100cca440) at parser.c:1454:18
+    frame #14: 0x000000010000e77f python.exe`_loop1_11_rule(p=0x0000000100cca440) at parser.c:21630:30
+    frame #15: 0x000000010000e454 python.exe`statements_rule(p=0x0000000100cca440) at parser.c:1413:18
+    frame #16: 0x000000010000d644 python.exe`file_rule(p=0x0000000100cca440) at parser.c:941:18
+    frame #17: 0x000000010000d477 python.exe`_PyPegen_parse(p=0x0000000100cca440) at parser.c:32814:18
+    frame #18: 0x00000001000072e5 python.exe`_PyPegen_run_parser(p=0x0000000100cca440) at pegen.c:1310:17
+    frame #19: 0x0000000100007b5b python.exe`_PyPegen_run_parser_from_file_pointer(fp=0x00007fff8079c2a0, start_rule=257, filename_ob=0x0000000100ca34c0, enc=0x0000000000000000, ps1=0x00000000000000
+00, ps2=0x0000000000000000, flags=0x00007ffeefbfedf8, errcode=0x0000000000000000, arena=0x0000000100c9d6c0) at pegen.c:1404:14
+    frame #20: 0x0000000100099197 python.exe`_PyParser_ASTFromFile(fp=0x00007fff8079c2a0, filename_ob=0x0000000100ca34c0, enc=0x0000000000000000, mode=257, ps1=0x0000000000000000, ps2=0x000000000000
+0000, flags=0x00007ffeefbfedf8, errcode=0x0000000000000000, arena=0x0000000100c9d6c0) at peg_api.c:26:12
+    frame #21: 0x000000010031b3f9 python.exe`pyrun_file(fp=0x00007fff8079c2a0, filename=0x0000000100ca34c0, start=257, globals=0x0000000100c86210, locals=0x0000000100c86210, closeit=1, flags=0x00007
+ffeefbfedf8) at pythonrun.c:1197:11
+    frame #22: 0x000000010031a734 python.exe`_PyRun_SimpleFileObject(fp=0x00007fff8079c2a0, filename=0x0000000100ca34c0, closeit=1, flags=0x00007ffeefbfedf8) at pythonrun.c:455:13
+    frame #23: 0x000000010031a312 python.exe`_PyRun_AnyFileObject(fp=0x00007fff8079c2a0, filename=0x0000000100ca34c0, closeit=1, flags=0x00007ffeefbfedf8) at pythonrun.c:89:15
+    frame #24: 0x0000000100352f95 python.exe`pymain_run_file_obj(program_name=0x0000000100ca3540, filename=0x0000000100ca34c0, skip_source_first_line=0) at main.c:353:15
+    frame #25: 0x0000000100352986 python.exe`pymain_run_file(config=0x000000010079c3c0) at main.c:372:15
+    frame #26: 0x0000000100351f09 python.exe`pymain_run_python(exitcode=0x00007ffeefbfef5c) at main.c:587:21
+    frame #27: 0x0000000100351ce8 python.exe`Py_RunMain at main.c:666:5
+    frame #28: 0x0000000100352079 python.exe`pymain_main(args=0x00007ffeefbfefd0) at main.c:696:12
+    frame #29: 0x00000001003520c7 python.exe`Py_BytesMain(argc=2, argv=0x00007ffeefbff040) at main.c:720:12
+    frame #30: 0x00000001000035b2 python.exe`main(argc=2, argv=0x00007ffeefbff040) at python.c:15:12
+    frame #31: 0x00007fff204bef5d libdyld.dylib`start + 1

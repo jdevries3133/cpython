@@ -1,0 +1,200 @@
+Backtrace
+================================================================================
+
+Current thread 0x000000010c84ce00 (most recent call first):
+  File "<frozen importlib._bootstrap>", line 306 in _module_repr
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/test_descr.py", line 3696 in test_uninitialized_modules
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/case.py", line 549 in _callTestMethod
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/case.py", line 592 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/case.py", line 652 in __call__
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 122 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 84 in __call__
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 122 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 84 in __call__
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/support/testresult.py", line 169 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/support/__init__.py", line 960 in _run_suite
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/support/__init__.py", line 1083 in run_unittest
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/test_descr.py", line 5734 in test_main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 246 in _runtest_inner2
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 282 in _runtest_inner
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 154 in _runtest
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 194 in runtest
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 423 in run_tests_sequential
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 521 in run_tests
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 694 in _main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 641 in main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 719 in main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/__main__.py", line 2 in <module>
+  File "/Users/JohnDeVries/repos/cpython/Lib/runpy.py", line 86 in _run_code
+  File "/Users/JohnDeVries/repos/cpython/Lib/runpy.py", line 196 in _run_module_as_main
+
+
+================================================================================
+All Output
+================================================================================
+➜  cpython git:(main) ./python.exe -m test
+== CPython 3.11.0a0 (heads/main:291848195f, Jun 19 2021, 11:01:43) [Clang 12.0.0 (clang-1200.0.32.27)]
+== macOS-11.4-x86_64-i386-64bit little-endian
+== cwd: /Users/JohnDeVries/repos/cpython/build/test_python_5312æ
+== CPU count: 4
+== encodings: locale=UTF-8, FS=utf-8
+0:00:00 load avg: 2.50 Run tests sequentially
+0:00:00 load avg: 2.50 [  1/427] test_grammar
+0:00:00 load avg: 2.50 [  2/427] test_opcodes
+0:00:00 load avg: 2.50 [  3/427] test_dict
+0:00:01 load avg: 2.50 [  4/427] test_builtin
+0:00:02 load avg: 2.54 [  5/427] test_exceptions
+0:00:06 load avg: 2.54 [  6/427] test_types
+0:00:07 load avg: 2.54 [  7/427] test_unittest
+0:00:19 load avg: 2.49 [  8/427] test_doctest
+0:00:23 load avg: 2.61 [  9/427] test_doctest2
+0:00:23 load avg: 2.61 [ 10/427] test_support
+0:00:32 load avg: 2.64 [ 11/427] test___all__
+0:00:37 load avg: 2.67 [ 12/427] test___future__
+0:00:38 load avg: 2.70 [ 13/427] test__locale
+0:00:39 load avg: 2.70 [ 14/427] test__opcode
+0:00:40 load avg: 2.70 [ 15/427] test__osx_support
+0:00:41 load avg: 2.70 [ 16/427] test__xxsubinterpreters
+0:00:46 load avg: 2.56 [ 17/427] test_abc
+0:00:47 load avg: 2.56 [ 18/427] test_abstract_numbers
+0:00:48 load avg: 2.52 [ 19/427] test_aifc
+0:00:50 load avg: 2.52 [ 20/427] test_argparse
+0:01:00 load avg: 2.52 [ 21/427] test_array
+0:01:09 load avg: 2.67 [ 22/427] test_asdl_parser
+0:01:10 load avg: 2.67 [ 23/427] test_ast
+0:01:21 load avg: 2.65 [ 24/427] test_asyncgen
+0:01:23 load avg: 2.65 [ 25/427] test_asynchat
+0:01:26 load avg: 2.51 [ 26/427] test_asyncio
+0:05:04 load avg: 2.20 [ 27/427] test_asyncore -- test_asyncio passed in 3 min 38 sec
+0:05:07 load avg: 2.26 [ 28/427] test_atexit
+0:05:09 load avg: 2.26 [ 29/427] test_audioop
+0:05:10 load avg: 2.26 [ 30/427] test_audit
+0:05:15 load avg: 2.16 [ 31/427] test_augassign
+0:05:16 load avg: 2.16 [ 32/427] test_base64
+0:05:18 load avg: 2.07 [ 33/427] test_baseexception
+0:05:19 load avg: 2.07 [ 34/427] test_bdb
+0:05:20 load avg: 2.07 [ 35/427] test_bigaddrspace
+0:05:21 load avg: 2.06 [ 36/427] test_bigmem
+0:05:23 load avg: 2.06 [ 37/427] test_binascii
+0:05:24 load avg: 2.06 [ 38/427] test_binhex
+0:05:25 load avg: 2.06 [ 39/427] test_binop
+0:05:26 load avg: 2.06 [ 40/427] test_bisect
+0:05:27 load avg: 1.98 [ 41/427] test_bool
+0:05:29 load avg: 1.98 [ 42/427] test_buffer
+0:06:02 load avg: 2.06 [ 43/427] test_bufio -- test_buffer passed in 33.9 sec
+0:06:09 load avg: 2.22 [ 44/427] test_bytes
+0:06:22 load avg: 2.26 [ 45/427] test_bz2
+0:06:28 load avg: 2.14 [ 46/427] test_c_locale_coercion
+0:06:33 load avg: 2.13 [ 47/427] test_calendar
+0:06:41 load avg: 2.20 [ 48/427] test_call
+0:06:42 load avg: 2.20 [ 49/427] test_capi
+0:06:52 load avg: 2.25 [ 50/427] test_cgi
+0:06:53 load avg: 2.15 [ 51/427] test_cgitb
+0:06:55 load avg: 2.15 [ 52/427] test_charmapcodec
+0:06:57 load avg: 2.15 [ 53/427] test_check_c_globals
+/Users/JohnDeVries/repos/cpython/Tools/c-analyzer/c_common/tables.py:236: FutureWarning: Possible nested set at position 12
+  _COLSPEC_RE = re.compile(textwrap.dedent(r'''
+0:06:58 load avg: 2.06 [ 54/427] test_class
+0:06:59 load avg: 2.06 [ 55/427] test_clinic
+0:07:01 load avg: 2.06 [ 56/427] test_cmath
+0:07:02 load avg: 2.06 [ 57/427] test_cmd
+0:07:03 load avg: 2.13 [ 58/427] test_cmd_line
+0:07:13 load avg: 2.04 [ 59/427] test_cmd_line_script
+0:07:23 load avg: 2.18 [ 60/427] test_code
+0:07:24 load avg: 2.16 [ 61/427] test_code_module
+0:07:25 load avg: 2.16 [ 62/427] test_codeccallbacks
+0:07:26 load avg: 2.16 [ 63/427] test_codecencodings_cn
+0:07:29 load avg: 2.15 [ 64/427] test_codecencodings_hk
+0:07:31 load avg: 2.15 [ 65/427] test_codecencodings_iso2022
+0:07:33 load avg: 2.15 [ 66/427] test_codecencodings_jp
+0:07:36 load avg: 2.22 [ 67/427] test_codecencodings_kr
+0:07:38 load avg: 2.22 [ 68/427] test_codecencodings_tw
+0:07:39 load avg: 2.28 [ 69/427] test_codecmaps_cn
+0:07:40 load avg: 2.28 [ 70/427] test_codecmaps_hk
+0:07:41 load avg: 2.28 [ 71/427] test_codecmaps_jp
+0:07:43 load avg: 2.28 [ 72/427] test_codecmaps_kr
+0:07:44 load avg: 2.34 [ 73/427] test_codecmaps_tw
+0:07:45 load avg: 2.34 [ 74/427] test_codecs
+0:07:51 load avg: 2.23 [ 75/427] test_codeop
+0:07:52 load avg: 2.23 [ 76/427] test_collections
+0:07:56 load avg: 2.21 [ 77/427] test_colorsys
+0:07:57 load avg: 2.21 [ 78/427] test_compare
+0:07:59 load avg: 2.21 [ 79/427] test_compile
+0:08:10 load avg: 2.43 [ 80/427] test_compileall
+0:08:46 load avg: 2.56 [ 81/427] test_complex -- test_compileall passed in 35.8 sec
+0:08:48 load avg: 2.56 [ 82/427] test_concurrent_futures
+0:12:24 load avg: 4.40 [ 83/427] test_configparser -- test_concurrent_futures passed in 3 min 36 sec
+0:12:28 load avg: 4.29 [ 84/427] test_contains
+0:12:29 load avg: 4.29 [ 85/427] test_context
+0:12:36 load avg: 4.27 [ 86/427] test_contextlib
+0:12:38 load avg: 4.09 [ 87/427] test_contextlib_async
+Task was destroyed but it is pending!
+task: <Task pending name='Task-4443' coro=<<async_generator_athrow without __name__>()>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-4445' coro=<<async_generator_athrow without __name__>()>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-4451' coro=<<async_generator_athrow without __name__>()>>
+0:12:40 load avg: 4.09 [ 88/427] test_copy
+0:12:42 load avg: 4.09 [ 89/427] test_copyreg
+0:12:44 load avg: 4.00 [ 90/427] test_coroutines
+0:12:48 load avg: 3.76 [ 91/427] test_cprofile
+0:12:51 load avg: 3.76 [ 92/427] test_crashers
+0:12:53 load avg: 3.54 [ 93/427] test_crypt
+0:12:54 load avg: 3.54 [ 94/427] test_csv
+0:13:02 load avg: 3.33 [ 95/427] test_ctypes
+0:13:06 load avg: 3.39 [ 96/427] test_curses
+test_curses skipped -- Use of the 'curses' resource not enabled
+0:13:06 load avg: 3.39 [ 97/427] test_dataclasses -- test_curses skipped (resource denied)
+0:13:09 load avg: 3.27 [ 98/427] test_datetime
+0:13:23 load avg: 3.26 [ 99/427] test_dbm
+0:13:24 load avg: 3.26 [100/427] test_dbm_dumb
+0:13:26 load avg: 3.26 [101/427] test_dbm_gnu
+0:13:27 load avg: 3.26 [102/427] test_dbm_ndbm
+0:13:29 load avg: 3.24 [103/427] test_decimal
+python.exe(5312,0x10c84ce00) malloc: can't allocate region
+:*** mach_vm_map(size=842105263157895168, flags: 100) failed (error code=3)
+python.exe(5312,0x10c84ce00) malloc: *** set a breakpoint in malloc_error_break to debug
+python.exe(5312,0x10c84ce00) malloc: can't allocate region
+:*** mach_vm_map(size=842105263157895168, flags: 100) failed (error code=3)
+python.exe(5312,0x10c84ce00) malloc: *** set a breakpoint in malloc_error_break to debug
+python.exe(5312,0x10c84ce00) malloc: can't allocate region
+:*** mach_vm_map(size=421052631578947584, flags: 100) failed (error code=3)
+python.exe(5312,0x10c84ce00) malloc: *** set a breakpoint in malloc_error_break to debug
+python.exe(5312,0x10c84ce00) malloc: can't allocate region
+:*** mach_vm_map(size=421052631578947584, flags: 100) failed (error code=3)
+python.exe(5312,0x10c84ce00) malloc: *** set a breakpoint in malloc_error_break to debug
+0:13:48 load avg: 3.35 [104/427] test_decorators
+0:13:49 load avg: 3.35 [105/427] test_defaultdict
+0:13:51 load avg: 3.35 [106/427] test_deque
+0:14:06 load avg: 3.05 [107/427] test_descr
+Fatal Python error: Segmentation fault
+
+Current thread 0x000000010c84ce00 (most recent call first):
+  File "<frozen importlib._bootstrap>", line 306 in _module_repr
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/test_descr.py", line 3696 in test_uninitialized_modules
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/case.py", line 549 in _callTestMethod
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/case.py", line 592 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/case.py", line 652 in __call__
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 122 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 84 in __call__
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 122 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/unittest/suite.py", line 84 in __call__
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/support/testresult.py", line 169 in run
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/support/__init__.py", line 960 in _run_suite
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/support/__init__.py", line 1083 in run_unittest
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/test_descr.py", line 5734 in test_main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 246 in _runtest_inner2
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 282 in _runtest_inner
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 154 in _runtest
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/runtest.py", line 194 in runtest
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 423 in run_tests_sequential
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 521 in run_tests
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 694 in _main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 641 in main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/libregrtest/main.py", line 719 in main
+  File "/Users/JohnDeVries/repos/cpython/Lib/test/__main__.py", line 2 in <module>
+  File "/Users/JohnDeVries/repos/cpython/Lib/runpy.py", line 86 in _run_code
+  File "/Users/JohnDeVries/repos/cpython/Lib/runpy.py", line 196 in _run_module_as_main
+
+Extension modules: _testcapi, _scproxy, _xxsubinterpreters, _testbuffer, _testinternalcapi, _ctypes_test, xxsubtype (total: 7)
+[1]    5312 segmentation fault (core dumped)  ./python.exe -m test
