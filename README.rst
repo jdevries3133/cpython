@@ -1,3 +1,15 @@
+bpo-19217 Ideas
+===============
+
+``fix.diff`` switches ``ndiff`` to ``unified_diff`` everywhere in unittest.
+
+``compare.sh`` will run ``demonstrate_changes.py`` with and without the
+patch to show how the change affects unittest output.
+
+Just note that I'm an OS X user, so ``compare.sh`` runs ``./python.exe``.
+Adjust as needed.
+
+
 This is Python version 3.11.0 alpha 0
 =====================================
 

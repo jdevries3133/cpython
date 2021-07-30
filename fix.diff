@@ -1,0 +1,42 @@
+diff --git a/Lib/unittest/case.py b/Lib/unittest/case.py
+index 872f121127..1541512c21 100644
+--- a/Lib/unittest/case.py
++++ b/Lib/unittest/case.py
+@@ -1018,9 +1018,11 @@ def assertSequenceEqual(self, seq1, seq2, msg=None, seq_type=None):
+                     differing += ('Unable to index element %d '
+                                   'of second %s\n' % (len1, seq_type_name))
+         standardMsg = differing
+-        diffMsg = '\n' + '\n'.join(
+-            difflib.ndiff(pprint.pformat(seq1).splitlines(),
+-                          pprint.pformat(seq2).splitlines()))
++        diffMsg = difflib.unified_diff(pprint.pformat(seq1).splitlines(),
++                                       pprint.pformat(seq2).splitlines(),
++                                       fromfile='expected', tofile='got',
++                                       lineterm='')
++        diffMsg = '\n' + '\n'.join(diffMsg)
+ 
+         standardMsg = self._truncateMessage(standardMsg, diffMsg)
+         msg = self._formatMessage(msg, standardMsg)
+@@ -1131,9 +1133,10 @@ def assertDictEqual(self, d1, d2, msg=None):
+ 
+         if d1 != d2:
+             standardMsg = '%s != %s' % _common_shorten_repr(d1, d2)
+-            diff = ('\n' + '\n'.join(difflib.ndiff(
++            diff = ('\n' + '\n'.join(difflib.unified_diff(
+                            pprint.pformat(d1).splitlines(),
+-                           pprint.pformat(d2).splitlines())))
++                           pprint.pformat(d2).splitlines(),
++                           lineterm='')))
+             standardMsg = self._truncateMessage(standardMsg, diff)
+             self.fail(self._formatMessage(msg, standardMsg))
+ 
+@@ -1214,7 +1217,8 @@ def assertMultiLineEqual(self, first, second, msg=None):
+                 firstlines = [first + '\n']
+                 secondlines = [second + '\n']
+             standardMsg = '%s != %s' % _common_shorten_repr(first, second)
+-            diff = '\n' + ''.join(difflib.ndiff(firstlines, secondlines))
++            diff = '\n' + ''.join(difflib.unified_diff(firstlines, secondlines,
++                                                       lineterm=''))
+             standardMsg = self._truncateMessage(standardMsg, diff)
+             self.fail(self._formatMessage(msg, standardMsg))
+ 
