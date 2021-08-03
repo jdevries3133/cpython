@@ -1,0 +1,2 @@
+In ``./Doc``, ``make clean`` deletes and also creates a new virtual
+environment if the virtual environment existed before.

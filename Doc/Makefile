@@ -138,7 +138,10 @@ htmlview: html
 	 $(PYTHON) -c "import webbrowser; webbrowser.open('build/html/index.html')"
 
 clean:
-	-rm -rf build/* $(VENVDIR)/*
+	[ -d $(VENVDIR) ] \
+		&& rm -rf $(VENVDIR) \
+		&& make venv; \
+	rm -rf build/*
 
 venv:
 	$(PYTHON) -m venv $(VENVDIR)
