@@ -45,7 +45,7 @@ help:
 	@echo "  check      to run a check for frequent markup errors"
 	@echo "  serve      to serve the documentation on the localhost (8000)"
 
-build: venv
+build:
 	-mkdir -p build
 # Look first for a Misc/NEWS file (building from a source release tarball
 # or old repo) and use that, otherwise look for a Misc/NEWS.d directory
@@ -137,21 +137,14 @@ pydoc-topics: build
 htmlview: html
 	 $(PYTHON) -c "import webbrowser; webbrowser.open('build/html/index.html')"
 
-clean: clean-venv
-	-rm -rf build/*
-
-clean-venv:
-	rm -rf $(VENVDIR)
+clean:
+	-rm -rf build/* $(VENVDIR)/*
 
 venv:
-	@if [ -d $(VENVDIR) ] ; then \
-		echo "venv already exists"; \
-	else \
-		$(PYTHON) -m venv $(VENVDIR); \
-		$(VENVDIR)/bin/python3 -m pip install -U pip setuptools; \
-		$(VENVDIR)/bin/python3 -m pip install -r requirements.txt; \
-		echo "The venv has been created in the $(VENVDIR) directory"; \
-	fi
+	$(PYTHON) -m venv $(VENVDIR)
+	$(VENVDIR)/bin/python3 -m pip install -U pip setuptools
+	$(VENVDIR)/bin/python3 -m pip install -r requirements.txt
+	@echo "The venv has been created in the $(VENVDIR) directory"
 
 dist:
 	rm -rf dist
