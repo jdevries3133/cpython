@@ -372,11 +372,11 @@ The following flags can be used in the *flags* argument of :func:`os.chflags`:
 
 .. data:: UF_COMPRESSED
 
-   The file is stored compressed (Mac OS X 10.6+).
+   The file is stored compressed (macOS 10.6+).
 
 .. data:: UF_HIDDEN
 
-   The file should not be displayed in a GUI (Mac OS X 10.5+).
+   The file should not be displayed in a GUI (macOS 10.5+).
 
 .. data:: SF_ARCHIVED
 
